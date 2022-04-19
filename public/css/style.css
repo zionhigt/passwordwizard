@@ -1,0 +1,277 @@
+:root {
+    --dark: #555555;
+    --dark-trans: #55555599;
+    --white: #f2f2f2;
+    --light-blue: #42a0d2;
+    --danger: #f8564a;
+    --success: #12ad5a;
+
+}
+body{
+    position: relative;
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: 'Roboto';
+    margin: 0;
+}
+ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+li {
+    height: auto;
+    position: relative;
+}
+.main {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 15px;
+    justify-content: space-evenly;
+}
+.text-danger {
+    color: var(--danger)!important;
+}
+aside.left {
+    width: 20%;
+    max-height: 95%;
+    background-color: var(--white);
+    color: var(--dark);
+    padding: 15px 25px;
+    overflow-x: hidden;
+}
+section.center {
+    min-width: 67%;
+    height: 91vh;
+    background-color: var(--white);
+    color: var(--dark);
+    padding: 0 25px;
+}
+
+.container {
+    font-size: 12px;
+}
+section.center, aside.left {
+    border-radius: 10px;
+}
+
+.container table tr{
+    border: 2px solid var(--dark);
+}
+.container table tr td input{
+    border: none;
+    /* background-color: var(--white); */
+}
+.container table tr td{
+    padding: 5px;
+    background-color: white;
+}
+.container table tr td button{
+    border: none;
+    background-color: white;
+}
+i, button *{
+    pointer-events: none;
+}
+.container table tr th{
+    text-align: left;
+}
+
+.d-none {
+    display: none!important;
+}
+.d-hidden {
+    visibility: hidden!important;
+}
+
+.btn {
+    border: 1px solid var(--dark);
+    border-radius: 3px;
+    padding: 5px;
+    color: var(--white);
+}
+
+.btn-action {
+    background-color: var(--light-blue);
+}
+.btn-success {
+    background-color: var(--success);
+}
+.btn-danger {
+    background-color: var(--danger);
+}
+#search {
+    margin: 3px;
+}
+a.search {
+    color: var(--dark);
+    padding: 5px;
+    text-decoration: none;
+}
+a.search:hover {
+    color: var(--light-blue);
+}
+
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+
+.edit{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+.group-btn {
+    margin-left: 30px;
+}
+.folder--link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 120px;
+    color: var(--dark);
+    opacity: 0.75;
+    position: relative;
+    cursor: pointer;
+    margin: 8px 0;
+    font-size: 1rem;
+}
+.folder--link i, .new-item-container i{
+    margin-right: 5px;
+}
+
+.folder--link + ul {
+    display: none;
+}
+.folder--link.open + ul {
+    border-left: 2px dotted #cacaca;
+    border-bottom: 2px solid #cacaca80;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    display: inline-block;
+}
+.folder--link.open{
+    /* color: var(--success); */
+    opacity: 1;
+}
+
+.workspace--link {
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.workspace--link a.selected {
+    border-bottom: 1px solid var(--dark);
+}
+.workspace--link a {
+    padding: 3px 0;
+    display: inline-block;
+}
+.workspace--link:hover {
+    color: var(--light-blue);
+}
+
+.add-btn {
+    cursor: pointer;
+    display: inline-block;
+    color: var(--light-blue);
+    font-size: 12px;
+    margin: 5px 0;
+}
+.add-btn:hover {
+    color: var(--dark);
+}
+
+.new-item-submit {
+    color: var(--light-blue);
+    border: none;
+    background-color: transparent;
+}
+.new-item-submit:hover {
+    color: var(--dark);
+}
+.new-item-name {
+    max-width: 100px;
+}
+.new-item-form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.type-selector-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.type-selector-container input[type='radio'] {
+    display: none;
+}
+.type-selector-container input[type='radio']:checked + label{
+    color: var(--light-blue);
+}
+.type-selector-container input[type='radio']:not(:checked) + label{
+    opacity: 0.5;
+}
+.type-selector-container input[type='radio']:not(:checked) + label:hover{
+    opacity: 1;
+}
+
+.connect-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 20px 15px;
+    background-color:  var(--dark-trans);
+    color: var(--white);
+    font-weight: bold;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    margin: 0 auto; 
+}
+.center-popup .close {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    color: var(--dark);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.center-popup .close:hover {
+    background-color: var(--dark);
+    color: var(--white);
+
+}
+
+.center-popup {
+    background-color: var(--white);
+    position: relative;
+    color: var(--dark);
+    padding: 20px 50px;
+    border-radius: 10px;
+
+}
+
+.form-group {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    margin: 10px;
+}
+.form-group label {
+    margin: 3px 0;
+}

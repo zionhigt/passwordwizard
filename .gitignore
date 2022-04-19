@@ -1,0 +1,6 @@
+passwordWizard-win32-x64/
+node_modules/
+package-lock.json
+.vscode/
+env/.env
+data.sqlite

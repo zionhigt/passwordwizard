@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>password wizard</title>
+</head>
+<body>
+    <section class="main">
+        <aside class="left">
+            <div class="folders--view">
+                <h4>Mes dossiers</h4>
+                <div class="folders--content">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <section class="center">
+            
+            <div class="container">
+                <div id="homeView" class="home">
+                    <h3>Créez ou selectionnez un espace de travail dans un dossier</h3>
+                    <p id="Welcome"></p>
+                </div>
+                <div class="no-found d-none">
+                    <h4>Aucun résultats</h4>
+                </div>
+                
+                <div class="passwordTable d-none">
+                    <div class="header">
+                        <h3></h3>
+                        <div id="search">
+                            <input type="text" placeholder="Rechercher par nom"/>
+                            <a href="" class="search" id="Go"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                        
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>URL</th>
+                                <th>Identifiant</th>
+                                <th>Mot de passe</th>
+                                <th>Commentaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div class="no-edit">
+                        <button id="newBtn" class="btn btn-action"><span> + nouveau</span></button>
+                    </div>
+                    <div class="edit d-none">
+                        <div>
+                            <button id="saveBtn" class="btn btn-success"><span>Enregistrer</span></button>
+                            <button id="cancelBtn" class="btn btn-danger"><span>Annuler</span></button>
+                        </div>
+                        <div class="group-btn">
+                            <button id="passGenBtn" type="button" class="btn btn-action">Générer un mot de passe sécurisé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="connect-popup">
+        <div class="center-popup">
+            <div class="close">
+                <!-- <i class="fab fab-cross"></i> -->
+                X
+            </div> 
+            <form id="connectForm" class="d-none">
+                <p>Veuillez vous connecter</p>
+                <div class="form-group">
+                    <label for="nameInput">Nom d'utilisateur</label>
+                    <input id="nameInput" type="text" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput">Mot de passe</label>
+                    <input id="passwordInput" type="password" name="password">
+                </div>
+                <input type="submit" class="btn btn-action" value="Connexion">
+            </form>
+            <form id="subscribeForm">
+                <p>Veuillez créer vos accés</p>
+                <div class="form-group">
+                    <label for="nameInput">Nom d'utilisateur</label>
+                    <input id="nameInput" type="text" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput">Mot de passe</label>
+                    <input id="passwordInput" type="password" name="password">
+                </div>
+                <input type="submit" class="btn btn-action" value="S'inscrire">
+            </form>
+        </div>
+    </div>
+    
+    <script type="module" src="../public/js/index.js"></script>
+</body>
+</html>
